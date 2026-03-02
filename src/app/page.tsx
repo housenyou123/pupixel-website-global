@@ -13,7 +13,7 @@ export default function Home() {
 
     setLoading(true);
     try {
-      await fetch("https://formsubmit.co/ajax/contact@pupixel.ai", {
+      await fetch("https://formsubmit.co/ajax/600df1642d57773bee9d56f4050135af", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ email }),
