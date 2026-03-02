@@ -1,4 +1,31 @@
+"use client";
+
+import { useState, FormEvent } from "react";
+
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    if (!email || loading) return;
+
+    setLoading(true);
+    try {
+      await fetch("https://formsubmit.co/ajax/contact@pupixel.ai", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      setSubmitted(true);
+    } catch {
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
       {/* Animated Gradient Orbs */}
@@ -82,12 +109,32 @@ export default function Home() {
               AI-powered tools for capturing and sharing authentic moments.
             </p>
 
-            <a
-              href="mailto:contact@pupixel.ai"
-              className="btn-glow inline-block text-sm text-white/70 border border-white/20 rounded-full px-6 py-3"
-            >
-              Get in touch →
-            </a>
+            {submitted ? (
+              <div className="inline-flex items-center gap-2 text-sm text-green-400 border border-green-400/30 rounded-full px-6 py-3 bg-green-400/5">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                You&apos;re on the list! We&apos;ll be in touch.
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full sm:flex-1 text-sm text-white bg-white/5 border border-white/20 rounded-full px-5 py-3 outline-none focus:border-white/40 transition-colors placeholder:text-white/30"
+                />
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="btn-glow text-sm text-white/90 border border-white/20 rounded-full px-6 py-3 whitespace-nowrap disabled:opacity-50"
+                >
+                  {loading ? "Submitting..." : "Notify me"}
+                </button>
+              </form>
+            )}
           </div>
         </main>
 
