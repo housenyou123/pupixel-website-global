@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pupixel AI - Transform Your Images with AI",
     description: "Generate, edit, and enhance images with cutting-edge AI technology. By Pixelbeat Inc.",
-    url: "https://pupixel.ai",
+    url: "https://pixelbeat.us",
     siteName: "Pupixel AI",
     type: "website",
   },
