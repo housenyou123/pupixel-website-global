@@ -13,20 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pupixel AI - Transform Your Images with AI | Pixelbeat Inc.",
-  description: "Pupixel AI is a powerful AI image tool that helps you generate, edit, and enhance images with cutting-edge artificial intelligence technology. By Pixelbeat Inc.",
-  keywords: ["AI", "image generation", "image editing", "artificial intelligence", "Pupixel", "Pixelbeat Inc."],
+  title: "pixelbeat - Share Real Life Stories | PIXELBEAT PTE. LTD.",
+  description: "pixelbeat is building AI-powered tools for capturing and sharing authentic moments. By PIXELBEAT PTE. LTD.",
+  keywords: ["AI", "story sharing", "real life stories", "authentic moments", "pixelbeat", "PIXELBEAT PTE. LTD."],
   openGraph: {
-    title: "Pupixel AI - Transform Your Images with AI",
-    description: "Generate, edit, and enhance images with cutting-edge AI technology. By Pixelbeat Inc.",
+    title: "pixelbeat - Share Real Life Stories",
+    description: "AI-powered tools for capturing and sharing authentic moments. By PIXELBEAT PTE. LTD.",
     url: "https://pixelbeat.us",
-    siteName: "Pupixel AI",
+    siteName: "pixelbeat",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pupixel AI - Transform Your Images with AI",
-    description: "Generate, edit, and enhance images with cutting-edge AI technology. By Pixelbeat Inc.",
+    title: "pixelbeat - Share Real Life Stories",
+    description: "AI-powered tools for capturing and sharing authentic moments. By PIXELBEAT PTE. LTD.",
+  },
+  icons: {
+    icon: "/icon.svg",
   },
 };
 

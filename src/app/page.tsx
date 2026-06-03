@@ -39,56 +39,25 @@ export default function Home() {
         <header className="w-full px-8 py-6">
           <nav className="max-w-6xl mx-auto flex items-center justify-between">
             <div className="flex items-center gap-3">
-              {/* Animated Logo */}
-              <div className="logo-container">
-                <svg width="36" height="36" viewBox="0 0 100 100" className="logo-svg">
-                  <defs>
-                    <radialGradient id="star-gradient" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="#1a1a1a" />
-                      <stop offset="100%" stopColor="#666" />
-                    </radialGradient>
-                  </defs>
-
-                  {/* White rotated square background */}
-                  <rect
-                    x="10" y="10"
-                    width="80" height="80"
-                    fill="white"
-                    transform="rotate(10, 50, 50)"
-                    className="logo-bg"
-                    rx="2"
-                  />
-
-                  {/* Four-pointed star made of 4 triangles */}
-                  <g className="star-group">
-                    {/* Top triangle */}
-                    <polygon
-                      points="50,15 60,40 40,40"
-                      fill="url(#star-gradient)"
-                      className="star-piece piece-top"
-                    />
-                    {/* Right triangle */}
-                    <polygon
-                      points="85,50 60,60 60,40"
-                      fill="url(#star-gradient)"
-                      className="star-piece piece-right"
-                    />
-                    {/* Bottom triangle */}
-                    <polygon
-                      points="50,85 40,60 60,60"
-                      fill="url(#star-gradient)"
-                      className="star-piece piece-bottom"
-                    />
-                    {/* Left triangle */}
-                    <polygon
-                      points="15,50 40,40 40,60"
-                      fill="url(#star-gradient)"
-                      className="star-piece piece-left"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <span className="text-base font-medium">Pupixel</span>
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 36 36"
+                className="logo-mark"
+                aria-hidden="true"
+              >
+                <rect x="2" y="2" width="32" height="32" rx="8" fill="white" />
+                <path
+                  d="M8.5 20H13.5L16 12.5L21 27L23.5 20H28"
+                  fill="none"
+                  stroke="black"
+                  strokeWidth="2.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <rect x="8.5" y="8.5" width="4.5" height="4.5" rx="1" fill="black" />
+              </svg>
+              <span className="text-base font-medium">pixelbeat</span>
             </div>
             <span className="text-sm text-white/50">Coming Soon</span>
           </nav>
@@ -144,10 +113,10 @@ export default function Home() {
         <footer className="w-full px-8 py-6">
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <span className="text-sm text-white/40">
-              Pixelbeat Inc.
+              PIXELBEAT PTE. LTD.
             </span>
             <span className="text-sm text-white/40">
-              © 2026 Pupixel
+              © 2026 pixelbeat
             </span>
           </div>
         </footer>

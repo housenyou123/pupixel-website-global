@@ -102,61 +102,8 @@ body {
   box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
 }
 
-/* Animated Logo - Fortune teller folding */
-.logo-container {
-  width: 36px;
-  height: 36px;
-}
-
-.logo-svg {
-  overflow: visible;
-}
-
-.logo-bg {
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
-
-/* Star pieces animation - fortune teller bounce */
-.piece-top {
-  transform-origin: 50px 42px;
-  animation: bounce-top 2s ease-in-out infinite;
-}
-
-.piece-bottom {
-  transform-origin: 50px 58px;
-  animation: bounce-bottom 2s ease-in-out infinite;
-}
-
-.piece-left {
-  transform-origin: 42px 50px;
-  animation: bounce-left 2s ease-in-out infinite;
-}
-
-.piece-right {
-  transform-origin: 58px 50px;
-  animation: bounce-right 2s ease-in-out infinite;
-}
-
-@keyframes bounce-top {
-  0%, 50%, 100% { transform: translateY(0); }
-  12.5% { transform: translateY(-6px); }
-  25% { transform: translateY(0); }
-}
-
-@keyframes bounce-bottom {
-  0%, 50%, 100% { transform: translateY(0); }
-  12.5% { transform: translateY(6px); }
-  25% { transform: translateY(0); }
-}
-
-@keyframes bounce-left {
-  0%, 25%, 75%, 100% { transform: translateX(0); }
-  50% { transform: translateX(0); }
-  62.5% { transform: translateX(-6px); }
-}
-
-@keyframes bounce-right {
-  0%, 25%, 75%, 100% { transform: translateX(0); }
-  50% { transform: translateX(0); }
-  62.5% { transform: translateX(6px); }
+.logo-mark {
+  display: block;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 10px 24px rgba(255, 255, 255, 0.12));
 }
